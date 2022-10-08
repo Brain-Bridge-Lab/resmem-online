@@ -2,6 +2,8 @@ version: 1
 frontend:
   phases:
     # IMPORTANT - Please verify your build commands
+    preBuild:
+      commands: ["pip install -r requirements.txt"]
     build:
       commands: ["gunicorn app:app"]
   artifacts:
