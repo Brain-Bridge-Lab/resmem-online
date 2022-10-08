@@ -1,2 +1,4 @@
 /venv/
 login.sh
+__pycache__
+.env

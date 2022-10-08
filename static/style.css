@@ -1,0 +1,59 @@
+#submit {
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 2px solid #26196C;
+    font-size: x-large;
+    color: #26196C;
+}
+
+#submit:hover {
+    background-color: #26196C;
+    color: white;
+}
+
+
+/*noinspection CssInvalidPseudoSelector*/
+.custom-file-input::file-selector-button {
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 2px solid #26196C;
+    font-size: x-large;
+    color: #26196C;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+.custom-file-input{
+    font-size: large;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+.custom-file-input::file-selector-button:hover {
+    background-color: #26196C;
+    color: white;
+}
+
+
+.return {
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 2px solid #26196C;
+    font-size: x-large;
+    color: #26196C;
+}
+
+.return:hover {
+    background-color: #26196C;
+    color: white;
+}
+
+#test_btn {
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 2px solid #26196C;
+    font-size: x-large;
+    color: #26196C;
+}

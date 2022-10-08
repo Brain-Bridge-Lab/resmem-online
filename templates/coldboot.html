@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type=text/javascript src="../static/wait.js"></script>
+    <title>ResMem</title>
+</head>
+<body>
+
+<h2>
+  Please Wait
+</h2>
+
+Our server uses a cold boot system. If you were the first person in a while to send a request to ResMem, it may take
+a little longer to get your results. A button will appear below this text when your results are ready. Any more you send
+after that should be returned faster.
+
+</body>
+
+<br>
+<center>
+<button style="text-align:center" type="button" id="test_btn" onclick="window.location.href='/data/{{ filename }}?image={{ image }}'" hidden>
+    Get Results
+</button>
+</center>
+
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }}
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+                const qstring = window.location.href
+                const urlArray = qstring.split("/")
+                const lastbit = urlArray[urlArray.length - 1]
+                const filename = lastbit.split('?')[0]
+
+                function button(){
+                    $.getJSON($SCRIPT_ROOT + '/_file_checker', {
+                        fname: filename
+                    }, function(data) {
+                        if (data.result === 1){
+                            $('#test_btn').show();}
+                        }
+                    )
+                }
+                setInterval(button, 500);
+});
+</script>
+
+</html>

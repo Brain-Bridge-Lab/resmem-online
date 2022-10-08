@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>ResMem</title>
+</head>
+<body>
+<div style="text-align: center;">
+{% if score %}
+    <p>Your image has a memorability score of {{ score }}.</p>
+{% endif %}
+{% if image %}
+    <img src="../{{ image }}" alt="User Image" height="256px">
+{% endif %}
+</div>
+</body>
+<button type="button" onclick="window.location.href='/'" class="return">
+    Back
+</button>
+</html>
